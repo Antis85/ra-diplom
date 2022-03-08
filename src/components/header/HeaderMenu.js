@@ -22,7 +22,7 @@ const menuItemsHeader = [
   },
 ];
 
-export function HeaderMenu() {
+export default function HeaderMenu() {
   return (
     <MenuList className="navbar-nav mr-auto" items={menuItemsHeader}>
       {(items) =>

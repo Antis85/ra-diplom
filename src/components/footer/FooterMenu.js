@@ -18,7 +18,7 @@ const menuItemsFooter = [
   },
 ];
 
-export function FooterMenu() {
+export default function FooterMenu() {
   return (
     <MenuList className="nav flex-column" items={menuItemsFooter}>
       {(items) =>

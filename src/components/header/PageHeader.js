@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import headerLogo from './img/header-logo.png';
+import headerLogo from '../../img/header-logo.png';
 import HeaderMenu from './HeaderMenu';
 
-export function PageHeader() {
+export default function PageHeader() {
   return (
     <header className="container">
       <div className="row">

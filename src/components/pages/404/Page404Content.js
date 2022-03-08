@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Page404Content() {
+export default function Page404Content() {
   return (
     <>
       <h2 className="text-center">Страница не найдена</h2>

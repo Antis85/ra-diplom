@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterMenu from './FooterMenu';
 
-export function PageFooter() {
+export default function PageFooter() {
   return (
     <footer className="container bg-light footer">
       <div className="row">

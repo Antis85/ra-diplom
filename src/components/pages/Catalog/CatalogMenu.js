@@ -26,7 +26,7 @@ const menuItemsCatalog = [
   },
 ];
 
-export function CatalogMenu() {
+export default function CatalogMenu() {
   return (
     <MenuList
       className="catalog-categories nav justify-content-center"

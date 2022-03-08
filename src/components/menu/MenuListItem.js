@@ -1,5 +1,5 @@
 import React from 'react';
 
-export function MenuListItem(props) {
+export default function MenuListItem(props) {
   return <li className={props.className}>{props.children}</li>;
 }

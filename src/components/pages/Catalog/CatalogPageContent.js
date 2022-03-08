@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function CatalogPageContent() {
+export default function CatalogPageContent() {
   return (
     <>
       <div>Catalog</div>

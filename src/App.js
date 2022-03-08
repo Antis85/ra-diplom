@@ -4,8 +4,8 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Catalog from './components/pages/Catalog/CatalogPageContent';
-import Main from './components/pages/Main/MainPageContent';
+import Catalog from './components/pages/Catalog/Catalog';
+import Main from './components/pages/Main/Main';
 import Page404 from './components/pages/404/Page404';
 import About from './components/pages/About/About';
 import Contacts from './components/pages/Contacts/Contacts';
