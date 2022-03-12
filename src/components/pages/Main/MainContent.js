@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Loader from '../../Loader';
 
 export default function MainContent() {
-  // useEffect(() => {
-  // },[]);
   return (
     <>
       <section className="top-sales">
