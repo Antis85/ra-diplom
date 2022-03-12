@@ -1,28 +1,39 @@
 import React from 'react';
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom';
-import Catalog from './components/pages/Catalog/Catalog';
-import Main from './components/pages/Main/Main';
-import Page404 from './components/pages/404/Page404';
-import About from './components/pages/About/About';
-import Contacts from './components/pages/Contacts/Contacts';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Catalog from './components/pages/Catalog/Catalog';
+// import Main from './components/pages/Main/Main';
+// import Page404 from './components/pages/404/Page404';
+// import About from './components/pages/About/About';
+// import Contacts from './components/pages/Contacts/Contacts';
+import CatalogContent from './components/pages/Catalog/CatalogContent';
+import MainContent from './components/pages/Main/MainContent';
+import Page404Content from './components/pages/404/Page404Content';
+import AboutContent from './components/pages/About/AboutContent';
+import ContactsContent from './components/pages/Contacts/ContactsContent';
+import PageHeader from './components/header/PageHeader';
+import PageFooter from './components/footer/PageFooter';
+import Banner from './components/Banner';
 
 export default function App() {
   return (
     <Router>
-      {/* <div className="page"> */}
-      <Routes>
-        {/* <Route path="/catalog/:id" element={<Product />} /> */}
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/" element={<Main />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
-      {/* </div> */}
+      <PageHeader />
+      <main className="container">
+        <div className="row">
+          <div className="col">
+            <Banner />
+            <Routes>
+              {/* <Route path="/catalog/:id" element={<Product />} /> */}
+              <Route path="/catalog" element={<CatalogContent />} />
+              <Route path="/about" element={<AboutContent />} />
+              <Route path="/contacts" element={<ContactsContent />} />
+              <Route path="/" element={<MainContent />} />
+              <Route path="*" element={<Page404Content />} />
+            </Routes>
+          </div>
+        </div>
+      </main>
+      <PageFooter />
     </Router>
   );
 }

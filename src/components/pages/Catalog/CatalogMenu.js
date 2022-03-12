@@ -1,32 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MenuList from '../../menu/MenuList';
 import MenuListItem from '../../menu/MenuListItem';
-import MenuItemLink from '../../menu/MenuItemLink';
+import CatalogMenuItemLink from '../../menu/CatalogMenuItemLink';
+// import { nanoid } from 'nanoid';
 
 const menuItemsCatalog = [
   {
-    // route: '/contacts',
+    route: '#',
     name: 'Все',
   },
   {
-    // route: '/contacts',
+    route: '#',
     name: 'Женская обувь',
   },
   {
-    // route: '/contacts',
+    route: '#',
     name: 'Мужская обувь',
   },
   {
-    // route: '/contacts',
+    route: '#',
     name: 'Обувь унисекс',
   },
   {
-    // route: '/contacts',
+    route: '#',
     name: 'Детская обувь',
   },
 ];
 
 export default function CatalogMenu() {
+  const [category, setCategory] = useState(menuItemsCatalog[0].name);
+  const onSelect = (categoryName) => {
+    // console.log('onSelect: ', categoryName);
+    setCategory((prevState) => {
+      // console.log('prevState: ', prevState);
+      if (categoryName === prevState) return prevState;
+      return categoryName;
+    });
+  };
+  // console.log('CatalogMenu_active: ', category);
   return (
     <MenuList
       className="catalog-categories nav justify-content-center"
@@ -35,12 +46,14 @@ export default function CatalogMenu() {
       {(items) =>
         items.map((item, index) => (
           <MenuListItem key={index} className="nav-item">
-            <MenuItemLink
-              className="nav-link"
-              classNameActive="active"
-              // route={item.route}
+            <CatalogMenuItemLink
+              className={
+                category === item.name ? 'nav-link active' : 'nav-link'
+              }
+              route={item.route}
               name={item.name}
-            />
+              onSelect={onSelect}
+            ></CatalogMenuItemLink>
           </MenuListItem>
         ))
       }

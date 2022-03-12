@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function MenuItemLink(props) {
+  const { route, className, name } = props;
   return (
-    <NavLink to={props.route} className={props.className}>
-      {props.name}
-    </NavLink>
+    <Link to={route} className={className}>
+      {name}
+    </Link>
   );
 }

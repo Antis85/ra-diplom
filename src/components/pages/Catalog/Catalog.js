@@ -1,5 +1,5 @@
 import withWrapper from '../../../hocs/withWrapper';
-import CatalogPageContent from './CatalogPageContent';
+import CatalogContent from './CatalogContent';
 
-const Catalog = withWrapper(CatalogPageContent);
+const Catalog = withWrapper(CatalogContent);
 export default Catalog;

@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuList from '../menu/MenuList';
 import MenuListItem from '../menu/MenuListItem';
-import MenuItemLink from '../menu/MenuItemLink';
+import MenuItemNavLink from '../menu/MenuItemNavLink';
 
 const menuItemsHeader = [
   {
@@ -28,7 +28,7 @@ export default function HeaderMenu() {
       {(items) =>
         items.map((item, index) => (
           <MenuListItem key={index} className="nav-item">
-            <MenuItemLink
+            <MenuItemNavLink
               className="nav-link"
               route={item.route}
               name={item.name}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboutPageContent() {
+export default function AboutContent() {
   return (
     <section className="top-sales">
       <h2 className="text-center">О магазине</h2>

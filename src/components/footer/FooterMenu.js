@@ -26,7 +26,6 @@ export default function FooterMenu() {
           <MenuListItem key={index} className="nav-item">
             <MenuItemLink
               className="nav-link"
-              classNameActive="active"
               route={item.route}
               name={item.name}
             />

@@ -1,5 +1,5 @@
 import withWrapper from '../../../hocs/withWrapper';
-import ContactsPageContent from './ContactsPageContent';
+import ContactsContent from './ContactsContent';
 
-const Contacts = withWrapper(ContactsPageContent);
+const Contacts = withWrapper(ContactsContent);
 export default Contacts;

@@ -1,5 +1,5 @@
 import withWrapper from '../../../hocs/withWrapper';
-import AboutPageContent from './AboutPageContent';
+import AboutContent from './AboutContent';
 
-const About = withWrapper(AboutPageContent);
+const About = withWrapper(AboutContent);
 export default About;
