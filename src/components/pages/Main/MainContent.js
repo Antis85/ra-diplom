@@ -1,17 +1,13 @@
 import React from 'react';
-import Loader from '../../Loader';
+// import Loader from '../../Loader';
+import TopsalesContent from './TopsalesContent';
+import CatalogContent from '../Catalog/CatalogContent';
 
 export default function MainContent() {
   return (
     <>
-      <section className="top-sales">
-        <h2 className="text-center">Хиты продаж!</h2>
-        <Loader />
-      </section>
-      <section className="catalog">
-        <h2 className="text-center">Каталог</h2>
-        <Loader />
-      </section>
+      <TopsalesContent />
+      <CatalogContent nosearch={true}/>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import Catalog from './components/pages/Catalog/Catalog';
 // import Main from './components/pages/Main/Main';
 // import Page404 from './components/pages/404/Page404';
@@ -23,10 +23,12 @@ export default function App() {
           <div className="col">
             <Banner />
             <Routes>
+              {/* <Route path="/cart" element={<Cart />} /> */}
               {/* <Route path="/catalog/:id" element={<Product />} /> */}
               <Route path="/catalog" element={<CatalogContent />} />
               <Route path="/about" element={<AboutContent />} />
               <Route path="/contacts" element={<ContactsContent />} />
+              <Route path="/ra-diplom" element={<MainContent />} />
               <Route path="/" element={<MainContent />} />
               <Route path="*" element={<Page404Content />} />
             </Routes>
