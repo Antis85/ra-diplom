@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export function SearchHeader({ invisible, form, handleChange }) {
+export default function HeaderSearch({ invisible, form, handleChange }) {
   // console.log('SearchHeader_invisible: ',invisible);
   const inputRef = useRef();
   // console.log('inputRef.current: ', inputRef.current);
@@ -28,14 +28,6 @@ export function SearchHeader({ invisible, form, handleChange }) {
         onChange={handleChange}
         ref={inputRef}
       ></input>
-    </form>
-  );
-}
-
-export function SearchCatalog({handleSubmit}) {
-  return (
-    <form className="catalog-search-form form-inline" onSubmit={handleSubmit}>
-      <input className="form-control" placeholder="Поиск"></input>
     </form>
   );
 }

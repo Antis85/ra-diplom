@@ -1,15 +1,15 @@
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
-// import serviceListReducer from '../reducers/serviceList';
-// import serviceAddReducer from '../reducers/serviceAdd';
-// import serviceEditReducer from '../reducers/serviceEdit';
-// import serviceFilterReducer from '../reducers/serviceFilter';
-import thunk from "redux-thunk";
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import topSalesReducer from '../reducers/topSales';
+import catalogReducer from '../reducers/catalog';
+import productReducer from '../reducers/product';
+import cartReducer from '../reducers/cart';
+import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
-  // serviceList: serviceListReducer,
-  // serviceAdd: serviceAddReducer,
-  // serviceEdit: serviceEditReducer,
-  // serviceFilter: serviceFilterReducer,
+  topSales: topSalesReducer,
+  catalog: catalogReducer,
+  product: productReducer,
+  cart: cartReducer,
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));

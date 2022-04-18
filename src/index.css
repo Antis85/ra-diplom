@@ -310,3 +310,32 @@ h2,
   background-color: #727e86;
   border-color: #727e86;
 }
+
+/* My custom styles*/
+.order .card {
+  max-width: 30rem;
+  margin: 0 auto;
+} 
+
+.error-text, .success-text {
+  width: 100%;
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.success-text {
+  color: darkcyan; 
+}
+
+.card {
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;  
+} 
