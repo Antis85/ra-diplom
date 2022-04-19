@@ -14,7 +14,7 @@ import {
   fetchPostCartFailed,
 } from '../actions/actionCreators';
 
-const url = process.env.REACT_APP_API_URL_DEV;
+const url = process.env.REACT_APP_API_URL_BUILD;
 
 export const fetchGetTopSales = () => (dispatch) => {
   dispatch(fetchTopSalesRequest());
