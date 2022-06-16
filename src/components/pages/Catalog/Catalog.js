@@ -10,7 +10,7 @@ import {
   catalogCategoryChange,
   catalogSearchChange,
   catalogOffsetChange,
-} from '../../../actions/actionCreators';
+} from '../../../store/SliceCatalog';
 import {
   fetchGetCatalogCategories,
   fetchGetCatalogContent,

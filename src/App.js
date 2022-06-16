@@ -13,19 +13,18 @@ import PageFooter from './components/footer/PageFooter';
 import Banner from './components/pages/Banner';
 import Product from './components/pages/Product/Product';
 import useStorage from './hooks/useStorage';
-import { setCartItems, setCartOwner } from './actions/actionCreators';
+import { setCartItems, setCartOwner } from './store/SliceCart';
 
 export default function App() {
   const [cart, setCart] = useStorage(localStorage, 'cart', true);
   const [owner, setOwner] = useStorage(localStorage, 'owner', true);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    // console.log('App_dispatch(setCartCounter(...))');
-    // console.log('App_localStorage_cart&cart.length: ', cart, cart?.length);
-    // console.log('App_localStorage_owner: ', owner);
     dispatch(setCartItems(cart));
     dispatch(setCartOwner(owner));
   }, [dispatch, cart, owner]);
+
   return (
     <Router>
       <PageHeader />

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import HeaderSearch from './HeaderSearch';
 import HeaderCart from './HeaderCart';
-import { catalogSearchChange } from '../../actions/actionCreators';
+import { catalogSearchChange } from '../../store/SliceCatalog';
 
 export default function PageHeaderWidget() {
   const [invisible, setInvisible] = useState(true);
